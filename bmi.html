@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="myCSS.css" />
+</head>
+<body>
+    <header class="header">
+        <nav>
+          <div class="nav-top">
+            <img src="calculator.png" >
+            <ul class="linksTop">
+              <li><a href="index.html">Standard</a></li>
+              <li><a href="">Scientific</a></li>
+              <li><a href="">Programmer</a></li>
+              <li><a href="">Date Calculation</a></li>
+              <li><a href="">Currency</a></li>
+              <li><a href="">Length</a></li>
+            </ul>
+            <div class="menu-btn" onclick="openNav()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+         
+          </div>
+          <div class="overlay" id="myNav">
+              <a href="" class="closeBtn"  onclick="closeNav()">&times;</a>
+          <ul class="links">
+            <li><a href="index.html">Standard</a></li>
+            <li><a href="">Scientific</a></li>
+            <li><a href="">Programmer</a></li>
+            <li><a href="">Date Calculation</a></li>
+            <li><a href="">Currency</a></li>
+            <li><a href="">Length</a></li>
+          </ul>
+        </div>
+        </nav>
+      
+      </header>
+  
+      <section class="calculator-container">
+        <div class="input" id="input"></div>
+          <div class="buttons">
+               
+                
+               <button class="btn">7</button>
+               <button class="btn">8</button>
+               <button class="btn">9</button>
+               <button class="btn" id="blue">AC</button>
+  
+               <button class="btn">4</button>
+               <button class="btn">5</button>
+               <button class="btn">6</button>
+               <button class="btn" id="blue">&lArr;</button>
+              
+  
+               <button class="btn">1</button>
+               <button class="btn">2</button>
+               <button class="btn">3</button>
+               <button class="btn" id="blue">GO</button>
+               
+  
+               <button class="btn">.</button>
+               <button class="btn">0</button>
+              
+               
+  
+            </div>
+          </div>
+  
+      </section>
+  
+      <footer></footer>
+  
+      <script src="calc.js"></script>
+</body>
+</html>

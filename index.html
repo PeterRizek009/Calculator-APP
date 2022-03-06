@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="myCSS.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav-top">
+          <img src="calculator.png" >
+          <ul class="linksTop">
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="">Scientific</a></li>
+            <li><a href="">Programmer</a></li>
+            <li><a href="">Date Calculation</a></li>
+            <li><a href="">Currency</a></li>
+            <li><a href="">Length</a></li>
+          </ul>
+          <div class="menu-btn" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+         
+        </div>
+        <div class="overlay" id="myNav">
+            <a href="" class="closeBtn"  onclick="closeNav()">&times;</a>
+        <ul class="links">
+          <li><a href="bmi.html">BMI</a></li>
+          <li><a href="">Scientific</a></li>
+          <li><a href="">Programmer</a></li>
+          <li><a href="">Date Calculation</a></li>
+          <li><a href="">Currency</a></li>
+          <li><a href="">Length</a></li>
+        </ul>
+      </div>
+      </nav>
+    
+    </header>
+
+    <section class="calculator-container">
+      <div class="input" id="input">
+      </div>
+        <div class="buttons">
+             <button class="btn" id="operator">&percnt;</button>
+             <button class="btn" id="operator">&divide;</button>
+             <button class="btn" id="operator">CE</button>
+             <button class="btn" id="clear">C</button>
+             <!-- <button class="btn">&larr;</button> -->
+              
+             <button class="btn" id="number" >7</button>
+             <button class="btn" id="number">8</button>
+             <button class="btn" id="number">9</button>
+             <button class="btn" id="operator">&times;</button>
+
+             <button class="btn" id="number">4</button>
+             <button class="btn" id="number">5</button>
+             <button class="btn" id="number">6</button>
+             <button class="btn" id="operator">-</button>
+            
+
+             <button class="btn" id="number">1</button>
+             <button class="btn" id="number">2</button>
+             <button class="btn" id="number">3</button>
+             <button class="btn" id="operator">+</button>
+             
+
+             <button class="btn">.</button>
+             <button class="btn">0</button>
+            
+             <button class="btn" id="orange">=</button>
+          </div>
+        </div>
+
+    </section>
+
+    <footer></footer>
+
+    <script src="calc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #e5e5e5;
+  --secondColor: #14213d;
+  --overlayColor: #818181;
+  --hoverColor: #fca311;
+}
+body {
+  font-family: cursive;
+  background: var(--mainColor);
+}
+
+/* ***************************  Start of Navbar **************************** */
+nav {
+  background-color: var(--secondColor);
+  box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.2);
+}
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.nav-top img {
+  width: 40px;
+  height: 40px;
+  margin: 0 40px;
+  color: #f5f5f5;
+}
+
+.menu-btn {
+  padding: 3px;
+  cursor: pointer;
+  align-self: center;
+  margin-right: 40px;
+  transition: 0.3s border ease-in-out;
+}
+.bar1,
+.bar2,
+.bar3 {
+  height: 2px;
+  width: 20px;
+  background-color: #f5f5f5;
+  margin: 5px 0;
+}
+.menu-btn:hover {
+  border: 2px solid #f5f5f5;
+}
+
+.linksTop {
+  display: none;
+}
+
+/* ***************************  End of Navbar **************************** */
+.overlay {
+  position: fixed;
+  min-height: 100%;
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+}
+.overlay .links {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 80px;
+  align-items: center;
+  list-style-type: none;
+}
+.links li a {
+  display: block;
+  color: var(--mainColor);
+  padding: 20px;
+  text-transform: capitalize;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--overlayColor);
+  transition: 0.3s color ease-in-out;
+}
+.links li a:hover {
+  color: var(--hoverColor);
+  margin-top: 5px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: var(--overlayColor);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.closeBtn:hover {
+  color: #f5f5f5;
+  font-size: 70px;
+}
+
+@media screen and (min-width: 690px) {
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .linksTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .linksTop li {
+    list-style-type: none;
+  }
+
+  .linksTop li a {
+    text-decoration: none;
+    padding: 23px;
+    font-size: 18px;
+    color: #f5f5f5;
+    transition: 0.2s margin-left, color, font-size ease-in-out;
+  }
+  .linksTop li a:hover {
+    margin-left: 5px;
+    color: var(--hoverColor);
+    font-size: 20px;
+  }
+}
+/* ****************************start of calculator **************** */
+.calculator-container {
+  margin: 40px auto;
+  padding: 5px;
+  display: block;
+  position: relative;
+  width: 500px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 2px;
+  border: 2px solid var(--secondColor);
+  background-color: var(--overlayColor);
+}
+
+.input {
+  border: 2px solid var(--secondColor);
+  background-color: var(--mainColor);
+  border-radius: 3px;
+  height: 200px;
+  padding: 4px 4px 0 0;
+  text-align: right;
+  margin: 0 2px 4px 0;
+  font-size: 1.8rem;
+  overflow-wrap: break-word;
+  transition: all 0.2s ease-in-out;
+}
+
+.input:hover {
+  border: 2px solid var(--hoverColor);
+  box-shadow: inset 11px 4.6px 13px rgba(0, 0, 0, 0.07),
+    88px 37px 104px rgba(0, 0, 0, 0.035);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  /* grid-template-rows: repeat(auto, minmax(40%, 1fr)); */
+  column-gap: 2px;
+  row-gap: 2px;
+  justify-content: space-evenly;
+  align-content: center;
+  padding-right: 3px;
+}
+
+.btn {
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  font-style: italic;
+  font-size: 20px;
+  border-radius: 2px;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s,
+    box-shadow 0.2s;
+}
+.btn:hover {
+  background-color: rgb(161, 155, 155);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+
+#operator {
+  background-color: var(--secondColor);
+  color: var(--mainColor);
+}
+
+#orange {
+  background-color: var(--hoverColor);
+  grid-column: 3 /4;
+  width: 203%;
+}
